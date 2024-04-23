@@ -1,0 +1,343 @@
+.bg-container {
+  background-image: linear-gradient(#9ba9eb, #c3caea);
+  min-height: 100vh;
+  background-size: cover;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.app-container {
+  background-color: #5763a5;
+  width: 90%;
+  margin: auto;
+  border-radius: 10px;
+  margin-top: 15px;
+}
+@media screen and (min-width: 768px) {
+  .app-container {
+    max-width: 1100px;
+    margin-top: 20px;
+  }
+}
+
+.app-logo-container {
+  width: 85%;
+  margin: auto;
+}
+@media screen and (min-width: 768px) {
+  .app-logo-container {
+    max-width: 1100px;
+  }
+}
+
+.app-image {
+  height: 60px;
+}
+@media screen and (min-width: 768px) {
+  .app-image {
+    height: 65px;
+  }
+}
+
+.add-user-details-main-container {
+  width: 85%;
+  /* border: 1px solid red; */
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+@media screen and (min-width: 768px) {
+  .add-user-details-main-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 95%;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+.add-user-details-container {
+  background-color: #454f84;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border-radius: 10px;
+  order: 2;
+  margin-bottom: 15px;
+}
+@media screen and (min-width: 768px) {
+  .add-user-details-container {
+    width: 45%;
+    padding: 30px;
+    order: 1;
+  }
+}
+
+.password-heading {
+  color: #f8fafc;
+  font-family: 'Roboto';
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+@media screen and (min-width: 768px) {
+  .password-heading {
+    font-size: 24px;
+    margin-bottom: 40px;
+  }
+}
+
+.input-container {
+  background-color: #f8fafc;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+.input-image {
+  height: 20px;
+  margin-left: 8px;
+}
+
+.input-text {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-left: 10px;
+  border-left: 2px solid #94a3b8;
+  outline: none;
+  font-family: 'Roboto';
+  border-right: none;
+  border-top: none;
+  border-bottom: none;
+  padding-left: 10px;
+  width: 100%;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.add-button {
+  background-color: #0b69ff;
+  color: #f8fafc;
+  font-family: 'Roboto';
+  height: 40px;
+  width: 100px;
+  align-self: flex-end;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  font-size: 16px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.small-image {
+  width: 90%;
+  order: 1;
+  margin-bottom: 15px;
+}
+
+@media screen and (min-width: 768px) {
+  .small-image {
+    display: none;
+  }
+}
+
+.large-image {
+  width: 45%;
+  order: 2;
+}
+@media screen and (max-width: 768px) {
+  .large-image {
+    display: none;
+  }
+}
+
+.app-list-container {
+  background-color: #5763a5;
+  width: 90%;
+  margin: auto;
+  border-radius: 10px;
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+}
+@media screen and (min-width: 768px) {
+  .app-list-container {
+    max-width: 1100px;
+    margin-top: 20px;
+  }
+}
+
+.list-app-container {
+  width: 90%;
+  /* border: 1px solid red; */
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  .list-app-container {
+    /* display: flex;
+    flex-direction: row;
+    justify-content: space-between; */
+    width: 95%;
+  }
+}
+
+.list-top-section-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.list-heading-container {
+  display: flex;
+}
+
+.list-heading {
+  font-family: 'Roboto';
+  color: #f8fafc;
+  font-size: 16px;
+  margin-right: 8px;
+  align-self: center;
+}
+@media screen and (min-width: 768px) {
+  .list-heading {
+    font-size: 22px;
+    margin-right: 15px;
+  }
+}
+
+.count {
+  font-family: 'Roboto';
+  color: #f8fafc;
+  border: 2px solid #b6c3ca;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 10px;
+}
+@media screen and (min-width: 768x) {
+  .count {
+    font-size: 16px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+
+.search-input-container {
+  background-color: #f8fafc;
+  display: flex;
+  align-items: center;
+  width: 40%;
+  border-radius: 5px;
+}
+@media screen and (min-width: 768px) {
+  .search-input-container {
+    width: 30%;
+  }
+}
+
+.search-image {
+  height: 25px;
+  margin-left: 8px;
+}
+
+.search-input {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  margin-left: 8px;
+  border-top: none;
+  border-bottom: none;
+  border-right: none;
+  outline: none;
+  padding-left: 10px;
+  border-left: 2px solid #b6c3ca;
+  width: 100%;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.break-line {
+  border: 2px solid #b6c3ca;
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+@media screen and (min-width: 768px) {
+  .break-line {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+}
+
+.search-checkbox-container {
+  align-self: flex-end;
+  /* border: 1px solid red; */
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-element {
+  height: 20px;
+  width: 20px;
+  margin-right: 15px;
+}
+.label-element {
+  color: #f8fafc;
+  font-family: 'Roboto';
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.list-container {
+  list-style-type: none;
+  padding: 0px;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* border: 1px solid red; */
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.no-password-image {
+  width: 85%;
+}
+@media screen and (min-width: 768px) {
+  .no-password-image {
+    width: 50%;
+  }
+}
+
+.no-password-text {
+  color: #f8fafc;
+  font-family: 'Roboto';
+  font-size: 18px;
+  font-weight: 600;
+}
+@media screen and (min-width: 768px) {
+  .no-password-text {
+    font-size: 24px;
+  }
+}
