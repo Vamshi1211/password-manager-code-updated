@@ -1,6 +1,6 @@
 import {Component} from 'react'
 import {v4 as uuidV4} from 'uuid'
-import PasswordItem from '../PasswordItems'
+import PasswordItems from '../PasswordItems'
 import './index.css'
 
 const smallImgUrl =
@@ -27,6 +27,8 @@ class AddPassword extends Component {
     isShowPassword: false,
     searchInput: '',
   }
+
+  componentDidMount() {}
 
   deleteItem = id => {
     const {passwordList} = this.state
@@ -62,8 +64,6 @@ class AddPassword extends Component {
         Math.ceil(Math.random() * backgroundColorList.length - 1)
       ]
 
-    console.log(initialBgColorClassName)
-
     const {websiteInput, userNameInput, passwordInput} = this.state
     const newPassword = {
       id: uuidV4(),
@@ -89,80 +89,6 @@ class AddPassword extends Component {
       isShowPassword: !prevState.isShowPassword,
     }))
   }
-
-  //   getUnorderedList = getSearchResults => {
-  //     // const {listOfPasswords} = this.props
-  //     const {isShowPassword} = this.state
-
-  //     // const getSearchResults = listOfPasswords.filter(eachItem =>
-  //     //   eachItem.newUserNameInput.toLowerCase().includes(searchInput),
-  //     // )
-
-  //     return (
-  //       <ul className="list-container">
-  //         {getSearchResults.map(eachItem => {
-  //           const {
-  //             id,
-  //             newWebsiteInput,
-  //             newUserNameInput,
-  //             newPasswordInput,
-  //             initialBgColor,
-  //           } = eachItem
-  //           const firstChar = newUserNameInput.slice(0, 1)
-
-  //           const showPasswordImage = isShowPassword ? (
-  //             <p className="password-input">{newPasswordInput}</p>
-  //           ) : (
-  //             <img
-  //               alt="stars"
-  //               src="https://assets.ccbp.in/frontend/react-js/password-manager-stars-img.png"
-  //               className="masked-image"
-  //             />
-  //           )
-  //           return (
-  //             <li key={eachItem.id} className="list-item">
-  //               <div className="logo-password-container">
-  //                 <p className={`${initialBgColor} name-logo`}>{firstChar}</p>
-  //                 <div className="name-password-container">
-  //                   <p className="website-name">{newWebsiteInput}</p>
-  //                   <p className="user-name">{newUserNameInput}</p>
-  //                   {showPasswordImage}
-  //                 </div>
-  //               </div>
-  //               <DeleteButton uniqueId={id} deleteListItem={this.deleteItem} />
-  //             </li>
-  //           )
-  //         })}
-  //       </ul>
-  //     )
-  //   }
-
-  //   getNoPasswordImage = () => {
-  //     const noPasswordsImgUrl =
-  //       'https://assets.ccbp.in/frontend/react-js/no-passwords-img.png'
-  //     const altText = 'no passwords'
-
-  //     return (
-  //       <div className="image-container">
-  //         <img
-  //           alt={altText}
-  //           src={noPasswordsImgUrl}
-  //           className="no-password-image"
-  //         />
-  //         <p className="no-password-text">No Passwords</p>
-  //       </div>
-  //     )
-  //   }
-
-  //   unorderedListItems = getSearchResults => {
-  //     // const {listOfPasswords} = this.props
-
-  //     const lengthOfList = getSearchResults.length
-
-  //     return lengthOfList === 0
-  //       ? this.getNoPasswordImage()
-  //       : this.getUnorderedList(getSearchResults)
-  //   }
 
   addPassword = () => {
     const {websiteInput, userNameInput, passwordInput} = this.state
@@ -261,8 +187,6 @@ class AddPassword extends Component {
         </div>
         {this.addPassword()}
 
-        {/* <PasswordItems listOfPasswords={passwordList} /> */}
-
         <div className="app-list-container">
           <div className="list-app-container">
             <div className="list-top-section-container">
@@ -311,9 +235,8 @@ class AddPassword extends Component {
             ) : (
               <ul className="list-container">
                 {getSearchResults.map(eachItem => (
-                  <PasswordItem
+                  <PasswordItems
                     key={eachItem.id}
-                    uniqueId={eachItem.id}
                     eachPasswordItem={eachItem}
                     deleteListItem={this.deleteItem}
                     passwordValue={isShowPassword}
@@ -321,8 +244,6 @@ class AddPassword extends Component {
                 ))}
               </ul>
             )}
-
-            {/* {this.unorderedListItems(getSearchResults)} */}
           </div>
         </div>
       </div>
@@ -331,3 +252,81 @@ class AddPassword extends Component {
 }
 
 export default AddPassword
+
+/* <PasswordItems listOfPasswords={passwordList} /> */
+
+/* {this.unorderedListItems(getSearchResults)} */
+
+//   getUnorderedList = getSearchResults => {
+//     // const {listOfPasswords} = this.props
+//     const {isShowPassword} = this.state
+
+//     // const getSearchResults = listOfPasswords.filter(eachItem =>
+//     //   eachItem.newUserNameInput.toLowerCase().includes(searchInput),
+//     // )
+
+//     return (
+//       <ul className="list-container">
+//         {getSearchResults.map(eachItem => {
+//           const {
+//             id,
+//             newWebsiteInput,
+//             newUserNameInput,
+//             newPasswordInput,
+//             initialBgColor,
+//           } = eachItem
+//           const firstChar = newUserNameInput.slice(0, 1)
+
+//           const showPasswordImage = isShowPassword ? (
+//             <p className="password-input">{newPasswordInput}</p>
+//           ) : (
+//             <img
+//               alt="stars"
+//               src="https://assets.ccbp.in/frontend/react-js/password-manager-stars-img.png"
+//               className="masked-image"
+//             />
+//           )
+//           return (
+//             <li key={eachItem.id} className="list-item">
+//               <div className="logo-password-container">
+//                 <p className={`${initialBgColor} name-logo`}>{firstChar}</p>
+//                 <div className="name-password-container">
+//                   <p className="website-name">{newWebsiteInput}</p>
+//                   <p className="user-name">{newUserNameInput}</p>
+//                   {showPasswordImage}
+//                 </div>
+//               </div>
+//               <DeleteButton uniqueId={id} deleteListItem={this.deleteItem} />
+//             </li>
+//           )
+//         })}
+//       </ul>
+//     )
+//   }
+
+//   getNoPasswordImage = () => {
+//     const noPasswordsImgUrl =
+//       'https://assets.ccbp.in/frontend/react-js/no-passwords-img.png'
+//     const altText = 'no passwords'
+
+//     return (
+//       <div className="image-container">
+//         <img
+//           alt={altText}
+//           src={noPasswordsImgUrl}
+//           className="no-password-image"
+//         />
+//         <p className="no-password-text">No Passwords</p>
+//       </div>
+//     )
+//   }
+
+//   unorderedListItems = getSearchResults => {
+//     // const {listOfPasswords} = this.props
+
+//     const lengthOfList = getSearchResults.length
+
+//     return lengthOfList === 0
+//       ? this.getNoPasswordImage()
+//       : this.getUnorderedList(getSearchResults)
+//   }

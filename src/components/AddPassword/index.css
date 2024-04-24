@@ -320,6 +320,7 @@
   /* border: 1px solid red; */
   margin-top: 30px;
   margin-bottom: 30px;
+  list-style-type: none;
 }
 .no-password-image {
   width: 85%;

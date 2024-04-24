@@ -187,8 +187,8 @@ import './index.css'
 
 // export default PasswordItems
 
-const PasswordItem = props => {
-  const {eachPasswordItem, deleteListItem, passwordValue, uniqueId} = props
+const PasswordItems = props => {
+  const {eachPasswordItem, deleteListItem, passwordValue} = props
   const {
     id,
     newWebsiteInput,
@@ -213,7 +213,7 @@ const PasswordItem = props => {
     />
   )
   return (
-    <li key={uniqueId} className="list-item">
+    <li className="list-item" key={newWebsiteInput}>
       <div className="logo-password-container">
         <p className={`${initialBgColor} name-logo`}>{firstChar}</p>
         <div className="name-password-container">
@@ -238,4 +238,4 @@ const PasswordItem = props => {
   )
 }
 
-export default PasswordItem
+export default PasswordItems
